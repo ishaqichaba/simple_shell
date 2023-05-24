@@ -28,7 +28,7 @@ int main(int argc, char *argf[])
 		{
 			if (execve(command, argv, environ) < 0)
 			{
-				error_msg(argf, command, error_count);
+				perror(command);
 				free(command);
 				exit(EXIT_FAILURE);
 			}
