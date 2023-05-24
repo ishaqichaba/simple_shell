@@ -20,7 +20,7 @@ char *_get_buff()
 	{
 		free(buff);
 		write(0, "\n", 2);
-		_exit(0);
+		exit(EXIT_SUCCESS);
 	}
 	/*Eliminates the new line character set by getline*/
 	buff[_strlen(buff) - 1] = '\0';
